@@ -87,7 +87,7 @@ sortByTheta p vs = (unpack . sort . calcNpack) vs
         -- sorts the thetas
         sort      = sortBy (\a b -> compare (snd a) (snd b)) 
         -- untuples to list of vertors
-        unpack    = map (\tup -> fst tup) 
+        unpack    = fst . unzip
 
 
 -- calculates the angle that a and b makes with the x-axis
